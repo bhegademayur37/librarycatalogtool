@@ -1149,19 +1149,19 @@ function removeElementWithValue($array, $key, $value){
 
 function insertIntoUsers($data)
 {
-	
-	$data[password]= md5($data[password],true);
-	$data[created_at]=date("Y-m-d H:i:s");
+	echo $data[password];
+	$data[password]=md5($data[password]);
+	$data['created_at']=date("Y-m-d H:i:s");
 
-print_r($data);
+//print_r($data);
 $this->pdo->insert('users', $data);
-echo "inserted into database";
+//echo "inserted into database";
 }
 
 
 public function authenticate($username, $password){
 	//echo $username;
-	$password= md5($password,true);
+	$password= md5($password);
 	//echo $password;
 	$record = $this->pdo->select('users','`email`="'.$username.'"');
 	//print_r($record[0][password]);

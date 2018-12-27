@@ -104,10 +104,13 @@ class db extends PDO {
     public function insert($table, $info) {
         $fields = $this->filter($table, $info);
         $sql = "INSERT INTO " . $table . " (" . implode($fields, ", ") . ") VALUES (:" . implode($fields, ", :") . ");";
-        $bind = array();
+       //  echo $sql;
+
+	$bind = array();
         foreach($fields as $field)
             $bind[":$field"] = $info[$field];
-        return $this->run($sql, $bind);
+	return $this->run($sql, $bind);
+
     }
 
     public function run($sql, $bind="") {

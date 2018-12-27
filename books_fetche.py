@@ -151,7 +151,7 @@ try:
            pass
    else:
      try:
-       mydb = mysql.connector.connect(host='localhost', user='root', passwd='root123', db='isbn_search')
+       mydb = mysql.connector.connect(host='localhost', user='isbn', passwd='isbn@123', db='isbn_search')
        cursor = mydb.cursor()
        cursor.execute('INSERT  INTO amazon_data(title,author,pages,publisher,language,isbn_10,isbn_13,Details,Subjectdb) VALUES("%s","%s","%s","%s","%s","%s","%s","%s","%s")' % (
                               Titledb, Authordb, Pagesdb, Publisherdb, Languagedb, ISBN1db, ISBN2db,Detailsdb,Subjectdb,))

@@ -92,11 +92,11 @@ echo $_SESSION['email'];
 												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register">
 											</div>
 											<?php 
-											
+												if(!empty($_POST)){											
 												$a=$u->insertIntoUsers($_POST);
 												//print_r($a); }
-
-											//print_r($_POST); ?>
+												}
+										//print_r($_POST); ?>
 										</div>
 									</div>
 								</form>
