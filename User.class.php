@@ -1153,7 +1153,6 @@ function insertIntoUsers($data)
 	$data[password]=md5($data[password]);
 	$data['created_at']=date("Y-m-d H:i:s");
 
-//print_r($data);
 $this->pdo->insert('users', $data);
 //echo "inserted into database";
 }
