@@ -1158,7 +1158,6 @@ $this->pdo->insert('users', $data);
 
 
 public function authenticate($username, $password){
-	//echo $username;
 	$password= md5($password);
 	//echo $password;
 	$record = $this->pdo->select('users','`email`="'.$username.'"');
