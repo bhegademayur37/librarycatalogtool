@@ -1,0 +1,239 @@
+
+body{
+background-image:url("/images/11_image.jpg");
+font-family:arial,helvetica,sans-serif;
+background-color: ;
+
+}
+
+
+
+/*header text and image*/
+h1 {
+  position:;
+  
+  margin-right: 350px;
+ margin-top: 0.6cm;
+  text-align:center ;
+ color: #ffa500; 
+ 	#color: 	#b89343;
+# display:inline;
+  }
+
+IMG {
+    #display:inline;
+	float:left;
+    margin-left: 10px;
+	#width:2px;
+	#height:100px;
+	}
+.header{
+#background-image:url("/images/commhead5.jpg") ;
+ background-repeat: no-repeat;
+width:100%;
+background-size: 100px 110px;
+background-color: ;
+padding:5px;
+}
+.footer {
+	
+	background-color: #efefefef;
+	text-align: center;
+	color: teal;
+	font-size:0.9em ;
+	line-height:2.5em;
+
+}
+
+
+input[type=text]{
+	 
+	 margin-top:10px;
+	 width: 300px; 
+	 height: 35px;
+	 position: relative;
+     float:left;
+	
+}
+
+.search_box
+{
+	
+	#padding:5px;
+	background-image:url("/images/wordcloud(3).png") ;
+	background-repeat: no repeat;
+	#background-size: 1300px 50px;
+	#background-size: 1380px 85px;
+	#opacity:0.10;
+	#background: rgb(54, 25, 25); 
+#background: rgba(54, 25, 25, .5);
+margin-top:-150px;
+width:auto;
+height:auto;
+}
+select{
+	margin-top:10px;
+	float:left;
+     height: 35px;
+	 width:6em;
+	 position: relative;
+	 text-align:;
+	 margin-left:30px;
+	
+}	
+
+.btn-style{
+	width: 6em;  
+	height: 35px;
+	float:left;
+	margin-top:10px;
+
+}
+
+.content{
+	margin-top:-50px;
+	}
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	width:100%;
+/*border: 1px solid #ccc;
+   # background-color: #f1f1f1;*/
+   margin-top: -60;
+   
+	  
+	background-color:#f9f5f180;
+	
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: #003366;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 12px;
+ 	#font-family: 'Open Sans', sans-serif,bold;
+	font:bold 0.9em/0.9em Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	text-shadow: 2px 2px 2px 2px #555;
+	
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;
+
+
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #fff;}
+
+
+
+ol { 
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	 margin-top: 10px;
+width: 100%;
+	}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: ;
+    padding: 5px 10px;
+    /*border: 1px solid #ccc;*/
+    border-top: none;
+
+		
+		}
+.tabcontent {
+    webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+input{
+width:100%;
+height:3em;
+font-size:1em;
+}
+
+
+#contentwrapper{
+float:left;
+min-height:70%;
+width:100%;
+background-color:#fff;
+
+}
+
+.ds-artifact-item{
+	float:left;
+	width:100%;
+	background-color:#fff;
+}
+.thumbnail-wrapper{
+	float:left;
+}
+.artifact-description{
+	float:left;
+	}
+
+#library li, #electronic li ,#doag li{
+#list-style-type:none;
+#display:block;
+	margin-top:10px;
+	width:100%;
+}
+
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+

@@ -1,0 +1,408 @@
+
+nav a{
+
+	color: #105461;
+	text-decoration: none;
+	font-size:14px;
+}
+nav{
+	    float: right;
+    margin-right: 28px;
+    margin-top: 7px;
+
+}
+.wrapper{
+
+	background: white;
+	margin-top: -16px;
+}
+.tablinks{
+
+	background: #ff960d !important;
+	color:white !important;
+}
+
+input[type=submit] ,input[type=button],.orange_btn{
+  background-color:  #FF960D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 19px ;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+
+background-image: url("http://knowbees.in/wp-content/uploads/2018/04/eb30b80920f4083ecd0b4204e2445b97e675e4d01cb2124294_1920.jpg");
+font-family: arial,helvetica,sans-serif;
+
+overflow-x: hidden;
+
+background-color: #cccccc;
+height: 500px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 97%;
+ margin-left: 12px;
+  font-size: 12px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr th{
+
+	background: #fe9900;
+color: white;
+}
+tr:nth-child(even) {
+  background-color: #ffe4bb;;
+}
+
+/*header text and image*/
+h1 { position:;
+  padding-top: 23px;
+ 
+ margin-top: 0.0cm;
+  text-align:center ;
+ #color: #f97311;
+##ffa500; 
+color: #105461;
+
+ 	#color: 	#b89343;
+# display:inline;
+  }
+
+IMG {
+    #display:inline;
+	float:left;
+    margin-left: 10px;
+	width: 246px;
+	margin-top: 3px;
+	#height:100px;
+	}
+.header{
+#background-image:url("/images/commhead5.jpg") ;
+ background-repeat: no-repeat;
+width:100%;
+background-size: 100px 110px;
+background-color:white ;
+height: 86px;
+#padding:5px;
+}
+.footer {
+	
+	background-color: #efefefef;
+	text-align: center;
+	color: teal;
+	font-size:0.9em ;
+	line-height:2.5em;
+
+}
+
+.input_search{
+	 
+	 margin-top:10px;
+	 width: 250px; 
+	 height: 30px;
+	 position: relative;
+     float:left;
+	
+}
+
+.search_box
+{
+	
+	background-image:url("/images/wordcloud(3).png") ;
+	background-repeat: repeat;
+	background-size: 1350px 90px;
+	#background-size: 100%;
+	#opacity:0.10;
+	#background: rgb(54, 25, 25); 
+#margin-top:40px;
+width:110%;
+height:auto;
+}
+select{
+	margin-top:10px;
+	float:left;
+     height: 30px;
+	 width:10em;
+	 position: relative;
+	 text-align:;
+	 margin-left:30px;
+	font-size:small;
+}	
+
+.btn-style{
+	width: 6em;  
+	height: 30px;
+	float:left;
+	margin-top:10px;
+	font-size:small;
+
+}
+
+.content{
+	
+	#width:890px;
+	width: 87%; 
+	padding-left: 2.4cm;
+	color:#5a5757;
+	}
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	width:100%;
+/*border: 1px solid #ccc;
+   # background-color: #f1f1f1;*/
+   #margin-top: -60;
+   
+	  
+	background-color:#f9f5f180;
+	
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: #003366;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 12px;
+ 	#font-family: 'Open Sans', sans-serif,bold;
+	font:bold 0.9em/0.9em Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	text-shadow: 2px 2px 2px 2px #555;
+	
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;
+
+
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #fff;}
+
+
+
+ol { 
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	 margin-top: 10px;
+width: 100%;
+	}
+
+
+/* Style the tab content */
+.tabcontent {
+    display: ;
+    padding: 5px 10px;
+    /*border: 1px solid #ccc;*/
+    border-top: none;
+
+		
+		}
+.tabcontent {
+    webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*input{
+width:100%;
+height:3em;
+font-size:1em;
+}*/
+
+
+#contentwrapper{
+float:left;
+min-height:70%;
+width:100%;
+background-color:#fff;
+
+}
+
+.ds-artifact-item{
+	float:left;
+	width:100%;
+	background-color:#fff;
+}
+.thumbnail-wrapper{
+	float:left;
+}
+.artifact-description{
+	float:left;
+	}
+
+#library li, #electronic li ,#doag li{
+#list-style-type:none;
+#display:block;
+	margin-top:10px;
+	width:100%;
+#list-style: none;
+}
+
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+
+/*login css*/
+
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: #029f5b;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}

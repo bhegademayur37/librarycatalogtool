@@ -1,0 +1,180 @@
+<?php
+error_reporting(E_ALL);
+include 'XmlParser.class.php';
+include 'config.php';
+include 'header.php';
+
+
+if(!empty($_GET['search'])){
+         
+	$search_terms = $_GET['search'];
+	$search_terms = str_replace('+',' ',$search_terms);
+	
+	if( $_GET['select_type'] =="All" || empty($_GET['select_type'])){
+			$abc= ($kohasource.'/cgi-bin/koha/opac-search.pl?idx=kw&q='.urlencode($search_terms).'&count=50&format=rss2');
+			echo $abc; 
+			$rss = file_get_contents($abc);
+		 echo $rss ; 
+			
+			
+			$dspace_grab = file_get_contents($dspacesource.'?query='.urlencode($search_terms).'&start=0&rpp=50&format=rss');
+		echo  $_GET['select_type'] ;
+		}
+	elseif($_GET['select_type'] =="Author"){
+			$rss = file_get_contents($kohasource.'/cgi-bin/koha/opac-search.pl?idx=au%252Cwrdl&q='.urlencode($search_terms).'&count=50&format=rss2');
+			$dspace_grab = file_get_contents($dspacesource.'?query='.urlencode($search_terms).'&submit=Go&filtertype_0=author&filter_0='.urlencode($search_terms).'&filter_relational_operator_0=contains&submit_apply_filter=Apply&count=50&format=rss');
+		echo  $_GET['select_type'] ;
+		}
+	elseif($_GET['select_type'] =="Title"){
+		
+			$rss =file_get_contents($kohasource.'/cgi-bin/koha/opac-search.pl?idx=ti&q='.urlencode($search_terms).'&format=rss2');
+			$dspace_grab = file_get_contents($dspacesource.'?filtertype_2=title&filter_relational_operator_2=contains&filter_2='.urlencode($search_terms).'&submit_apply_filter=Apply&query='.urlencode($search_terms).'count=50&format=rss');
+		echo  $_GET['select_type'] ;
+		}
+	elseif($_GET['select_type'] =="Subject"){
+		$rss = file_get_contents($kohasource.'/cgi-bin/koha/opac-search.pl?idx=su&q='.urlencode($search_terms).'&count=50&format=rss2');
+		$dspace_grab = file_get_contents($dspacesource.'?filtertype_2=subject&filter_relational_operator_2=contains&filter_2='.urlencode($search_terms).'&submit_apply_filter=Apply&query='.urlencode($search_terms).'count=50&format=rss');
+		echo  $_GET['select_type'] ;
+		}
+	
+	$rss = str_replace('&amp;','and',$rss);
+	$Parser = new XmlParser();
+	$results = $Parser->parse($rss);
+	
+	$rss_dspace = str_replace('&amp;','and',$dspace_grab);
+	$Parser = new XmlParser();
+	$results_dspace = $Parser->parse($rss_dspace);
+}
+
+?>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script src="/js/functions.js"></script> 
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+
+<form method="get">
+
+
+<div class="select">
+
+<select name="select_type" id="select_t" >
+  <option value="All">All</option>
+  <option value="Author">Author</option>
+  <option value="Title">Title</option>
+  <option value="Subject">Subject</option>
+
+</select>
+<input type="text" name="search" placeholder="Search ..." value="<?php echo $search_terms?>"/>
+<button type="submit" onclick="function openCity(evt, cityName)" class="btn-style" id="Go">Go</button>
+<script>
+
+//$(function() {
+
+   // var temp="All"; 
+   // $("#select_type").val(temp);
+//});
+
+document.getElementById('select_t').value = "<?php echo $_GET['select_type'];?>";
+  </script>
+
+
+</div>
+</form>
+
+<br/>
+<br/>
+<br/>
+ <ul class="tab">
+  <?php 
+	$count_koha=0;
+  
+  foreach($results[0]['children'][0]['children'] as $el){
+  	if($el['tag'] == 'ITEM'){
+		$desc = strip_tags($el['children'][3]['data']);
+		$desc_chunks = explode('Place Hold', $desc);
+		$search_koha = "<li><a href=\"$kohasource/".$el['children'][2]['data']."\" target=\"_new\">".$el['children'][0]['data']."</a> <br/> ".$desc_chunks[0]."</li>\n";
+		$koha_results.=$search_koha;
+		$count_koha++;
+	}
+  }
+  ?>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'library')" id="firsttab"> Library Catalog  (<?php echo $count_koha ?>) </a></li>
+  
+  
+<?php
+	
+	 $count_dspace=0;
+	
+foreach($results_dspace[0]['children'][0]['children'] as $el){
+  	if($el['tag'] == 'ITEM'){
+	
+		$desc = strip_tags($el['children'][3]['data']);
+		$desc_chunks = explode('Place Hold', $desc);
+		$host = $el['children'][1]['data'];
+		$host = str_replace('http://hdl.handle.net/',$dspacehost.'/xmlui/handle/',$host);
+		$search_dspace="<li><a href=\"".$host."\" target=\"_new\">".$el['children'][0]['data']."</a> <br/> ".$el['children'][2]['data']."</li>\n";
+		$dspace_results.=$search_dspace;
+		
+		$count_dspace++;
+	}
+  }
+?>  
+  
+<li><a href="#" class="tablinks" onclick="openCity(event, 'electronic')">Electronic Resources  (<?php echo $count_dspace ?>)</a></li>
+</ul>
+
+<div id="contentwrapper">
+
+<div id="library" ol class="tabcontent">
+
+<h3>Results from Library Catalog</h3>
+
+<ol><?php  echo $koha_results; ?></ol>
+<br/>
+<br/>
+</div>
+
+<div id="electronic" class="tabcontent">
+
+<h3>Results from Electronic Resources</h3>	
+
+<ol><?php echo $dspace_results; ?></ol>
+</div>
+</div>
+
+<script>
+eventFire(document.getElementById('firsttab'), 'click');
+</script>
+
+<?php include("footer.php"); ?>
+</body>
+</html>
+
+<?php
+function domNodeList_to_string($DomNodeList) {
+    $output = '';
+    $doc = new DOMDocument;
+    while ( $node = $DomNodeList->item($i) ) {
+        // import node
+        $domNode = $doc->importNode($node, true);
+        // append node
+        $doc->appendChild($domNode);
+        $i++;
+    }
+    $output = $doc->saveXML();
+    $output = print_r($output, 1);
+    // I added this because xml output and ajax do not like each others
+    $output = htmlspecialchars($output);
+    return $output;
+}
+
+
+
+
+?>
+
