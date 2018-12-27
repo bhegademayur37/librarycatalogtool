@@ -1154,7 +1154,6 @@ function insertIntoUsers($data)
 	$data['created_at']=date("Y-m-d H:i:s");
 
 $this->pdo->insert('users', $data);
-//echo "inserted into database";
 }
 
 
