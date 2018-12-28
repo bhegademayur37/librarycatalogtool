@@ -23,8 +23,6 @@ if(!empty($_GET['search'])){
 	
 
 //$isbn10=$u->ISBN13toISBN10($search_terms);
-//print_r($isbn10);
-
 //}	
 }
 ?>
