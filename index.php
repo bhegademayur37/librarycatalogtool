@@ -10,6 +10,7 @@ if(empty($_SESSION))
 include 'header.php';
 include 'User.class.php';
 include 'class.db.php';
+header("Content-Type: text/html; charset=ISO-8859-8");
 $u=new User;
 
 if(!empty($_GET['search'])){
@@ -23,25 +24,24 @@ if(!empty($_GET['search'])){
 
 //$isbn10=$u->ISBN13toISBN10($search_terms);
 //print_r($isbn10);
- //echo $output;
 
 //}	
 }
 ?>
-
 <html>
 
 <head>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
-
+<meta charset="ISO-8859-1"> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/functions.js"></script> 
 </head>
 
 
 <body>
-<form method="get">
+<form method="get" id="form">
 <div class="search_box">
 
 <br>
@@ -68,7 +68,7 @@ document.getElementById('select_t1').value = "<?php echo $_GET['select_type1'];?
 <br>
 </div>
 </form>
-
+<div class="loader" style="visibility:hidden;"></div>
 <?php
 if(empty($_GET['search'])&& $_GET['submit'] !="List"){
 ?>
@@ -269,7 +269,7 @@ if($_GET['select_type1'] =="Title" ||$_GET['select_type1'] =="Isbn")
 	?>
 
 
-<form  method="get">
+<form  method="get" id="form">
 
 	<li><a href="#" class="tablinks" ><?php echo $_GET['select_type1'];?> Search Results(<?php echo $count_metasearch ?>)</a></li>
 	<div id="contentwrapper">
@@ -307,6 +307,12 @@ echo '</div>';
 
 <br/>
 <br/>
+
+<script type="text/javascript">
+$('#form').submit(function() {
+    $('.loader').css('visibility', 'visible');
+});
+</script>
 
 <script>
 eventFire(document.getElementById('firsttab'), 'click');
