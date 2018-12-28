@@ -10,7 +10,7 @@ if(empty($_SESSION))
 include 'header.php';
 include 'User.class.php';
 include 'class.db.php';
-header("Content-Type: text/html; charset=ISO-8859-8");
+header("Content-Type: text/html; charset=ISO");
 $u=new User;
 
 if(!empty($_GET['search'])){
@@ -29,10 +29,9 @@ if(!empty($_GET['search'])){
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-<meta charset="ISO-8859-1"> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
  <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/functions.js"></script> 
 </head>
