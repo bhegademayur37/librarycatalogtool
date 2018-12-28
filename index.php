@@ -138,7 +138,7 @@ if( $_GET['select_type1'] =="Isbn")
 			$query_result=$u->getIsbndetails($isbn10);
 
 			if(empty($query_result)){
-				$input="python final_book_fetch.py $isbn10" ;
+				$input="python book_fetched.py $isbn10" ;
 			$output = exec($input); 
 			//print_r($output);
 			$query_result=$u->getIsbndetails($isbn10);
@@ -151,7 +151,7 @@ if( $_GET['select_type1'] =="Isbn")
 			
 			if(empty($query_result)){
 				
-				$input="python final_book_fetch.py $trim_search_term" ;
+				$input="python book_fetched.py $trim_search_term" ;
 			$output = exec($input); 
 			//print_r($output);
 			$query_result=$u->getIsbndetails($trim_search_term);
@@ -214,7 +214,7 @@ foreach ($session_list_isbn as $key => $sl) {
 	<!--<h5 style="color:#003366">Results From DatabaseResources</h5>-->
 	<h5 style="color:#003366">Please select following results to generate CSV</h5>	
 	<?php echo "<table><tbody>";
-	echo '<tr><th><input type="checkbox" checked="checked" onclick="toggle(this);"/></th><th>ISBN10</th><th>ISBN13</th><th>TITLE</th><th>AUTHOR</th><th>PUBLISHER</th><th>LANGUAGE</th><th>SUBJECT</th><th>DETAILS</th></tr>'; ?>
+	echo '<tr><th><input type="checkbox" checked="checked" onclick="toggle(this);"/></th><th>ISBN10</th><th>ISBN13</th><th>TITLE</th><th>AUTHOR</th><th>PUBLISHER</th><th>LANGUAGE</th><th>SUBJECT</th><th>SUMMARY</th></tr>'; ?>
 	<?php echo   $result_metasearch;
 	echo "</table>";
 	if(!empty($_SESSION[email])){
@@ -276,7 +276,7 @@ if($_GET['select_type1'] =="Title" ||$_GET['select_type1'] =="Isbn")
 	<div id="Doag" class="tabcontent">
 	<h5 style="color:#003366">Please select following results to generate CSV</h5> 	
 	<?php echo "<table><tbody>";
-	echo '<tr><th><input type="checkbox"  onclick="toggle(this);"/></th><th>ISBN10</th><th>ISBN13</th><th>TITLE</th><th>AUTHOR</th><th>PUBLISHER</th><th>LANGUAGE</th><th>SUBJECT</th><th>DETAILS</th></tr>'; ?>
+	echo '<tr><th><input type="checkbox"  onclick="toggle(this);"/></th><th>ISBN10</th><th>ISBN13</th><th>TITLE</th><th>AUTHOR</th><th>PUBLISHER</th><th>LANGUAGE</th><th>SUBJECT</th><th>SUMMARY</th></tr>'; ?>
 	<?php echo   $result_metasearch;
 	echo "</table>";
 	if($_GET['submit'] !="List"){
