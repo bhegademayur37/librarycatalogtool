@@ -21,7 +21,7 @@ if(!empty($_GET['search'])){
 	
 //if($_GET['select_type1'] =="Isbn"){
 	
-
+//added
 //$isbn10=$u->ISBN13toISBN10($search_terms);
 //}	
 }
