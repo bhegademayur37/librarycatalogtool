@@ -16,7 +16,7 @@ echo $_SESSION['email'];
 
 <!------ Include the above in your HEAD tag ---------->
 
-
+<div class="loader" style="visibility:hidden;"></div>
 <div class="container">
     	<div class="row" style="padding-top:30px ">
 			<div class="col-md-6 col-md-offset-3">
@@ -117,6 +117,12 @@ echo $_SESSION['email'];
 
 
 	</style>
+
+<script type="text/javascript">
+$('#login-form').submit(function() {
+    $('.loader').css('visibility', 'visible');
+});
+</script>
 
 	<script type="text/javascript">
 		$(function() {
