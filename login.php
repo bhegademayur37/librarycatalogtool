@@ -37,7 +37,7 @@ echo $_SESSION['email'];
 							<div class="col-lg-12">
 								<form id="login-form" method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="email" id="username" tabindex="1" class="form-control" placeholder="E-mail" value="">
+										<input type="text" name="email" id="username" tabindex="1" class="form-control" placeholder="E-mail Address" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
@@ -66,7 +66,7 @@ echo $_SESSION['email'];
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
-													<span>Not having username & password please Register</span>
+													<span><b>Not having username & password please Register</b></span>
 												</div>
 											</div>
 										</div>

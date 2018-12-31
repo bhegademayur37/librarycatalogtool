@@ -13,7 +13,7 @@ echo '<a href="logout.php"><i class="fa fa-user"></i> Logout </a>&nbsp;';
 </nav>
 
 <div id="header " class ="header">
-<IMG  src="images/cropped-logo3-1.png" >
+<a href="index.php"> <IMG  src="images/cropped-logo3-1.png" ></a>
 <h1>Knowbees Consulting Cataloging Tool <h1>
 
 </div>

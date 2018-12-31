@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url('https://filedb.experts-exchange.com/incoming/2014/12_w50/886830/load.gif') 50% 50% no-repeat rgb(249,249,249);
+    background: url('/images/load.gif') 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
 
@@ -49,7 +49,7 @@ input[type=submit] ,input[type=button],.orange_btn{
 
 body{
 
-background-image: url("http://knowbees.in/wp-content/uploads/2018/04/eb30b80920f4083ecd0b4204e2445b97e675e4d01cb2124294_1920.jpg");
+background-image: url("/images/eb30b80920f4083ecd0b4204e2445b97e675e4d01cb2124294_1920.jpg");
 font-family: arial,helvetica,sans-serif;
 
 overflow-x: hidden;
@@ -132,7 +132,8 @@ height: 86px;
 	 height: 30px;
 	 position: relative;
      float:left;
-	
+	 border: none;
+padding: 11px;	
 }
 
 .search_box
@@ -157,6 +158,19 @@ select{
 	 text-align:;
 	 margin-left:30px;
 	font-size:small;
+	   # background: #105461;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+background: url(/images/favicon.ico) 96% / 20% no-repeat #105461;
+
+-webkit-appearance: none;
+
+-moz-appearance: none;
+
+appearance: none;
 }	
 
 .btn-style{
@@ -165,9 +179,30 @@ select{
 	float:left;
 	margin-top:10px;
 	font-size:small;
+	background: #105461;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 4px;
+font-weight: bold;
+}
+
+select:hover {
+	 # background: #c6312d;
+	background: url(/images/favicon.ico) 96% / 20% no-repeat  #c6312d;
+
+-webkit-appearance: none;
+
+-moz-appearance: none;
+
+appearance: none;
 
 }
 
+
+.btn-style:hover {
+	  background: #c6312d;
+}
 .content{
 	
 	#width:890px;
