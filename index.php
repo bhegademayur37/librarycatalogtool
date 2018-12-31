@@ -21,7 +21,6 @@ if(!empty($_GET['search'])){
 	
 //if($_GET['select_type1'] =="Isbn"){
 	
-//added
 //$isbn10=$u->ISBN13toISBN10($search_terms);
 //}	
 }
@@ -57,8 +56,8 @@ document.getElementById('select_t1').value = "<?php echo $_GET['select_type1'];?
 
 
 
-<input type="text" class="input_search" name="search" placeholder="Search ..." value="<?php echo $search_terms?>"/>
-<button type="submit" onclick="function openCity(evt, cityName)" class="btn-style" id="Go">Go</button>
+<input type="text" required="required"  class="input_search" name="search" placeholder="Search ..." value="<?php echo $search_terms?>"/>
+<button type="submit" onclick="function openCity(evt, cityName)" class="btn-style" id="Go"><i class="fa fa-search"></i></button>
 <br>
 <br>
 <br>
@@ -201,7 +200,7 @@ foreach ($session_list_isbn as $key => $sl) {
 }
 //print_r($_SESSION);
 //unset($_GET);
-
+if(!empty($result_metasearch)){ 
 ?>
 <form  method="post" action="csv.php" id="DownloadCSVform">
 
@@ -226,9 +225,12 @@ echo '<input type="button" name ="loginto" value="Login to Download CSV" onclick
 //$u->array_to_csv_download($isbn_array_result);
 
 
+}else{
+
+	echo '<h3 style="color:#003366;text-align: center"> &nbsp;&nbsp;&nbsp;Empty List ..</h3>';
 }
 
-
+}
 //print_r($isbn_array_result);
 
 //if($_GET[Download CSV]=='Download CSV'){
