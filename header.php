@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 <nav>
 <?php
 session_start();
