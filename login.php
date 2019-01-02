@@ -108,15 +108,6 @@ echo $_SESSION['email'];
 		</div>
 	</div>
 
-	<style type="text/css">
-		
-/*body {
-    padding-top: 90px;
-}*/
-
-
-
-	</style>
 
 <script type="text/javascript">
 $('#login-form').submit(function() {

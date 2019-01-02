@@ -70,25 +70,24 @@ if(empty($_GET['search'])&& $_GET['submit'] !="List"){
 ?>
 <div class="wrapper">
 <div class ="content">
-
+<!--
 <p align="justify"><br/><span style="font-size: 1.3vw;line-height: 1.5;"> 
 What would it mean to you if, needing knowledge for your studies, work, a project, or to develop an idea, you just had to step through one door to have your wishes made reality?  Without the hassle of browsing numerous sites, you can access any information needed at just one click. We at First Ray Consulting, have developed a utility to search Books, Journals, Theses, Papers, Periodical, Databases, Repositories like DSPACE, Eprints..
-</span></p>
+</span></p>-->
 </div>
 <br/>
 
 <div class="slider" id="main-slider"><!-- outermost container element -->
 	<div class="slider-wrapper"><!-- innermost wrapper element -->
-		<img src="images/whdl-slider-1.jpg" alt="First" class="slide" /><!-- slides -->
-		<img src="images/bookmark-books-bokeh-hd-wallpaper.jpg" alt="Second" class="slide" />
-		<!--<img src="http://acert.hunter.cuny.edu/files/2015/04/10671587203_327d4e7b20_z.jpg" alt="Second" class="slide" />-->
-                   <img src="images/fonstola.ru-89861.jpg"alt="Second" class="slide" />
+		<img src="images/Library-Image-Slider-1.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="images/Library-Image-Slider-3.jpg" alt="Second" class="slide" />
+		<!--<img src="http://acert.hunter.cuny.edu/files/2015/04/10671587203_327d4e7b20_z.jpg" alt="Second" class="slide" />
+                   <img src="images/Library-Image-Slider-1.jpg" alt="Second" class="slide" />-->
 
-		<img src="images/referensi.jpg"alt="Third" class="slide" />		
-		<img src="images/books_library_old_111388_2048x1152.jpg" alt="Four" class="slide" />
+	<!--	<img src="images/referensi.jpg"alt="Third" class="slide" />		
+		<img src="images/books_library_old_111388_2048x1152.jpg" alt="Four" class="slide" />-->
 	</div>
 </div>	
-</div>
 
 <?php 
 }
@@ -296,23 +295,30 @@ echo '</div>';
 
 	 ?>
 	
-	
 	</div>
 	</div>
-
 </ul>
+<?php include("footer.php"); ?>
+</div>
 <!--for display table end -->
 
 
-<br/>
-<br/>
 
 <script type="text/javascript">
 $('#form').submit(function() {
     $('.loader').css('visibility', 'visible');
 });
+
+
 </script>
 
+
+<script>
+$(window).load(function() {
+                $('.loader').css('visibility', 'visible');
+});
+
+</script>
 <script>
 eventFire(document.getElementById('firsttab'), 'click');
 

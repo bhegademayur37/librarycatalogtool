@@ -27,15 +27,16 @@ nav{
 
 	background: white;
 	margin-top: -16px;
+#	padding: 20px;
 }
 .tablinks{
 
-	background: #ff960d !important;
+	background: #2a5b69 !important;
 	color:white !important;
 }
 
 input[type=submit] ,input[type=button],.orange_btn{
-  background-color:  #FF960D;
+  background-color: #82cac9;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -45,6 +46,10 @@ input[type=submit] ,input[type=button],.orange_btn{
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+input[type=submit]:hover ,input[type=button]:hover,.orange_btn:hover{
+background: #b4cf6d;
 }
 
 body{
@@ -77,11 +82,11 @@ td, th {
 }
 tr th{
 
-	background: #fe9900;
+	background: #2a5b69;
 color: white;
 }
 tr:nth-child(even) {
-  background-color: #ffe4bb;;
+  background-color: #cce4ea;
 }
 
 /*header text and image*/
@@ -102,7 +107,7 @@ IMG {
     #display:inline;
 	float:left;
     margin-left: 10px;
-	width: 246px;
+	width: 235px;
 	margin-top: 3px;
 	#height:100px;
 	}
@@ -117,12 +122,14 @@ height: 86px;
 }
 .footer {
 	
-	background-color: #efefefef;
-	text-align: center;
+	background-color: white;
+	text-align: right;
 	color: teal;
 	font-size:0.9em ;
 	line-height:2.5em;
-
+	#padding-top:5px;
+	padding-right: 38px;
+	margin-top: -33px;
 }
 
 .input_search{
@@ -139,9 +146,11 @@ padding: 11px;
 .search_box
 {
 	
-	background-image:url("/images/wordcloud(3).png") ;
+#background-image:url("/images/wordcloud(3).png") ;
+	background-image:url("/images/Word-Collage-2.jpg") ;
 	background-repeat: repeat;
-	background-size: 1350px 90px;
+	#background-size: 1350px 90px;
+	 background-size: 1322px 90px;
 	#background-size: 100%;
 	#opacity:0.10;
 	#background: rgb(54, 25, 25); 
@@ -164,7 +173,7 @@ select{
     cursor: pointer;
     border-radius: 4px;
     font-weight: bold;
-background: url(/images/favicon.ico) 96% / 20% no-repeat #105461;
+background: url(/images/favicon.ico) 96% / 20% no-repeat #82cac9;
 
 -webkit-appearance: none;
 
@@ -179,7 +188,7 @@ appearance: none;
 	float:left;
 	margin-top:10px;
 	font-size:small;
-	background: #105461;
+	background: #82cac9;
 color: white;
 border: none;
 cursor: pointer;
@@ -189,7 +198,7 @@ font-weight: bold;
 
 select:hover {
 	 # background: #c6312d;
-	background: url(/images/favicon.ico) 96% / 20% no-repeat  #c6312d;
+	background: url(/images/favicon.ico) 96% / 20% no-repeat  #b4cf6d;
 
 -webkit-appearance: none;
 
@@ -201,7 +210,7 @@ appearance: none;
 
 
 .btn-style:hover {
-	  background: #c6312d;
+	  background: #b4cf6d;
 }
 .content{
 	
@@ -331,7 +340,7 @@ html,body {
 }
 .slider {
 	width: 1024px;
-	margin: 2em auto;
+	margin: 1.5em auto;
 	
 }
 

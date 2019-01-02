@@ -1,4 +1,4 @@
 <div id="footer " class ="footer">
 
-<h3> Maintained by First Ray Consulting, Pune</h3>
+<h4>Developed & Maintained by <a style="color:#fe9900" href="http://www.firstray.in">First Ray Consulting</a>, Pune</h4>
 </div>
